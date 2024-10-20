@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import Login from '../Login/Login'; // Adjust the path based on your folder structure
-import './InfoSection.css'; // Import the CSS file
-import { useUser } from '../../UserContext'; // Import the useUser hook
+import Login from '../Login/Login';
+import './InfoSection.css'; 
+import { useUser } from '../../UserContext'; 
 
 const InfoSection = ({ 
     primary,
@@ -45,11 +45,10 @@ const InfoSection = ({
                         </div>
                     </div>
 
-                    {/* Add the Login component to the right side */}
                     <div className="info-column">
                         <div className="img-wrapper">
-                            {!user&&<Login />} {/* Render your Login component here */}
-                            {user&&<img src='./Logo/Monkey.jpg' alt={alt} className="img" />}
+                            {!user&&<Login />}
+                            {user&&<img src='./Logo/landing_page.png' alt={alt} className="img" />}
                         </div>
                     </div>
                 </div>

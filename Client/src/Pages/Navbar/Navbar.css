@@ -3,14 +3,12 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #574bf7;
+  background-color: #000000;
   padding: 10px;
    font-family: "Fredoka", sans-serif;
   font-optical-sizing: auto;
   font-weight: normal;
   font-style: normal;
-  font-variation-settings:
-    "wdth" 100;
     color: white;
     gap: 200px;
 }

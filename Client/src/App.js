@@ -5,7 +5,7 @@ import { UserProvider } from './UserContext'; // Import the provider
 import Profile from './Pages/Profile/Profile'; // Assuming you created Profile page
 import Features from './Pages/Features/Features'; // Assuming you created Features page
 import Landing from './Pages/Landing/InfoSection';
-import StartMeeting from './Pages/ActivityPage/Interview/StartMeeting'; // Import the StartMeeting component
+import StartMeeting from './Actvity/StartMeeting/StartMeeting'; // Import the StartMeeting component
 import JoinMeeting from './Pages/ActivityPage/Scedule/JoinMeeting';
 import Schedule from './Pages/ActivityPage/Calender/Schedule';
 
@@ -18,9 +18,10 @@ function App() {
           <Route path="/" element={<Landing />} /> 
           <Route path="/profile" element={<Profile />} /> 
           <Route path="/features" element={<Features />} /> 
-          <Route path="/start-meeting" element={<StartMeeting />} /> 
+          {/* <Route path="/start-meeting" element={<StartMeeting />} />  */}
           <Route path="/join-meeting" element={<JoinMeeting />} /> 
           <Route path="schedule-meeting" element={<Schedule />} />
+          <Route path="/start-meeting" element={<StartMeeting />} />
         </Routes>
       </Router>
     </UserProvider>

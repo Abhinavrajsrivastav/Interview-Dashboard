@@ -46,6 +46,8 @@
     flex: 1;
     max-width: 50%;
     flex-basis: 50%;
+    position: relative;
+    top: 100px;
 }
 
 .text-wrapper {
@@ -124,19 +126,11 @@
     max-width: 400px;
     height: auto;
     border-radius: 10px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-    -webkit-mask-image: url('./Monkey.jpg'); /* Add your image here */
-    mask-image: url('./Monkey.jpg');
     mask-size: cover;
     background-color: transparent; /* Set background color to transparent */
-    margin-top: 100px;
-}
-
-
-.img:hover {
-    transform: scale(1.05); /* Slight zoom effect on hover */
-    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Intensify the shadow */
+    position: relative;
+    top: -20px;
 }
 
 

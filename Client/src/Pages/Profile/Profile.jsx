@@ -7,7 +7,7 @@ import { FcMenu } from 'react-icons/fc';
 const Profile = () => {
   const { user, setUser } = useUser();
   const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+  const [isContactVisible, setIsContactVisible] = useState(false); // State to control toggle
 
   useEffect(() => {
     const userData = localStorage.getItem('user');
@@ -18,7 +18,12 @@ const Profile = () => {
     }
   }, [setUser]);
 
-  // Check if the user object is not null
+  // Toggle function for the contact list
+  const toggleContactList = () => {
+    setIsContactVisible((prev) => !prev);
+  };
+
+  // If no user is logged in
   if (!user) {
     return <h1>Please log in to view your profile</h1>;
   }
@@ -26,33 +31,65 @@ const Profile = () => {
   return (
     <div className="profile-page">
       <Features />
-      <div className="user-profile">
-        <div className="user-profile-details">
-          <img 
-            src={user.photoURL || './Logo/Calm-Full-HD-Wallpaper.jpg'} 
-            alt={user.userName} 
-            className="profile-picture" 
-          />
-        </div>
-       <div>
-        <div className="user-bio">
-        <div className="user-profile-card-id">
-          <p><strong>@_abhinav_srivastav__</strong></p>
-          <section className='User-Profile-btn'>
-            <button className="follow-button">Follow</button>
-            <button className="message-btn">Message</button>
-            <button className="menu-btn"><FcMenu size='20' style={{color:'white'}}/></button>
-          </section>
-        </div>
-         <div className="user-stats">
-          <p className=''><strong>{user.posts || 0}</strong> posts</p>
-          <p className=''><strong>{user.followers || 0}</strong> followers</p>
-          <p className=''><strong>{user.following || 0}</strong> following</p>
-        </div>
-          <p>{user.bio || 'No bio available'}</p>
-          <p><a href={user.youtubeLink || '#'}>{"@AbhinavSrivastav" || 'No YouTube link'}</a></p>
-        </div>
+      <div className="profile-container">
+        
+        {/* Toggle Button for Contact List */}
+       <div className='Contacts-container'>
+         <button className="toggle-btn" onClick={toggleContactList}>
+          {isContactVisible ? 'Close Contact' : 'View Contact'}
+        </button>
+
+        {/* Contact List - Visible only when isContactVisible is true */}
+        {isContactVisible && (
+          <div className="contact-list">
+            <h2>Contact List</h2>
+            <ul>
+              <li>John Doe - johndoe@example.com</li>
+              <li>Jane Smith - janesmith@example.com</li>
+              <li>Sam Wilson - samwilson@example.com</li>
+              <li>Emma Johnson - emmajohnson@example.com</li>
+            </ul>
+          </div>
+        )}
        </div>
+
+        <div className="Profile-Components">
+          {/* First Component Group */}
+          <div className="Profile-Component-1">
+            <div className="Profile-Component-11">
+              <h3>Meeting Scheduler</h3>
+              <p>Plan and schedule interviews seamlessly with calendar sync.</p>
+            </div>
+            <div className="Profile-Component-11">
+              <h3>Real-time Video Calls</h3>
+              <p>Start or join video interviews directly from your dashboard.</p>
+            </div>
+            <div className="Profile-Component-11">
+              <h3>Feedback Management</h3>
+              <p>Store interviewer feedback and generate reports.</p>
+            </div>
+          </div>
+
+          {/* Second Component Group */}
+          <div className="Profile-Component-2">
+            <div className="Profile-Component-21">
+              <h3>Analytics Dashboard</h3>
+              <p>Track interview metrics and performance in real-time.</p>
+            </div>
+            <div className="Profile-Component-21">
+              <h3>Candidate Pool</h3>
+              <p>Access all candidate profiles and interview status.</p>
+            </div>
+            <div className="Profile-Component-21">
+              <h3>Notifications & Alerts</h3>
+              <p>Receive alerts for upcoming interviews and tasks.</p>
+            </div>
+            <div className="Profile-Component-21">
+              <h3>Documentation Center</h3>
+              <p>Store interview guidelines and document templates.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
