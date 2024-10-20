@@ -1,0 +1,83 @@
+/* StartMeeting component styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0c0c0c;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.start-meeting-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f7f7f7;
+}
+
+.start-meeting-box {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+  text-align: center;
+  width: 400px;
+}
+
+h2 {
+  color: #574bf7;
+  margin-bottom: 20px;
+}
+
+p {
+  color: #666;
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.start-meeting-btn {
+  background-color: #574bf7;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.start-meeting-btn:hover {
+  background-color: #4134d8;
+}
+
+.start-meeting-btn:disabled {
+  background-color: #9a8df7;
+  cursor: not-allowed;
+}
+
+.meeting-info {
+  margin-top: 30px;
+  background-color: #f4f4fe;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+}
+
+.meeting-info .info-title {
+  color: #574bf7;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.meeting-info a {
+  color: #4134d8;
+  text-decoration: none;
+}
+
+.meeting-info a:hover {
+  text-decoration: underline;
+}
+
+strong {
+  font-size: 18px;
+  color: #333;
+}
