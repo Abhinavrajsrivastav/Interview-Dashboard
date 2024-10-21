@@ -5,7 +5,8 @@ import { UserProvider } from './UserContext'; // Import the provider
 import Profile from './Pages/Profile/Profile'; // Assuming you created Profile page
 import Features from './Pages/Features/Features'; // Assuming you created Features page
 import Landing from './Pages/Landing/InfoSection';
-import StartMeeting from './Actvity/StartMeeting/StartMeeting'; // Import the StartMeeting component
+// import StartMeeting from './Actvity/StartMeeting/StartMeeting'; // Import the StartMeeting component/
+import StartMeeting from './Pages/ActivityPage/Interview/StartMeeting';
 import JoinMeeting from './Pages/ActivityPage/Scedule/JoinMeeting';
 import Schedule from './Pages/ActivityPage/Calender/Schedule';
 

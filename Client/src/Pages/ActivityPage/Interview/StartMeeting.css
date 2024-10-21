@@ -1,83 +1,76 @@
-/* StartMeeting component styles */
+/* StartMeeting.css */
 body {
   margin: 0;
   padding: 0;
-  background-color: #0c0c0c;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: 'Arial', sans-serif;
+  background: url('./stacked-waves-haikei.svg') no-repeat center center fixed;
+  background-size: cover;
+  overflow-x: hidden;
 }
 
-.start-meeting-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f7f7f7;
-}
-
-.start-meeting-box {
-  background-color: #fff;
-  border-radius: 15px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  padding: 40px;
+.meeting-container {
+  max-width: 500px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
   text-align: center;
-  width: 400px;
 }
 
-h2 {
-  color: #574bf7;
+.toggle-buttons {
+  display: flex;
+  justify-content: space-around;
   margin-bottom: 20px;
 }
 
-p {
-  color: #666;
-  font-size: 16px;
-  margin: 10px 0;
-}
-
-.start-meeting-btn {
-  background-color: #574bf7;
-  color: white;
+.toggle-button {
+  width: 45%;
+  padding: 10px;
   border: none;
-  padding: 12px 25px;
   border-radius: 8px;
-  font-size: 16px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.start-meeting-btn:hover {
-  background-color: #4134d8;
-}
-
-.start-meeting-btn:disabled {
-  background-color: #9a8df7;
-  cursor: not-allowed;
-}
-
-.meeting-info {
-  margin-top: 30px;
-  background-color: #f4f4fe;
-  padding: 15px;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-.meeting-info .info-title {
-  color: #574bf7;
+  background-color: #e8ebf3;
   font-weight: bold;
-  margin-bottom: 10px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-.meeting-info a {
-  color: #4134d8;
-  text-decoration: none;
+.toggle-button.active {
+  background-color: #4b7bec;
+  color: white;
 }
 
-.meeting-info a:hover {
-  text-decoration: underline;
+.toggle-button:hover {
+  background-color: #5a85f6;
 }
 
-strong {
-  font-size: 18px;
-  color: #333;
+.meeting-form input {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: border-color 0.3s;
+}
+
+.meeting-form input:focus {
+  border-color: #4b7bec;
+  outline: none;
+}
+
+.submit-button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  background-color: #4b7bec;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+  background-color: #3a6dd6;
 }
