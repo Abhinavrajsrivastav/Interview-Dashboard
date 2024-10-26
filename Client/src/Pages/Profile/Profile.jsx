@@ -47,7 +47,6 @@ const Profile = () => {
               <li>John Doe - johndoe@example.com</li>
               <li>Jane Smith - janesmith@example.com</li>
               <li>Sam Wilson - samwilson@example.com</li>
-              <li>Emma Johnson - emmajohnson@example.com</li>
             </ul>
           </div>
         )}
